@@ -47,8 +47,8 @@ L'étude vise à maîtriser et analyser l'algorithme K-means à travers plusieur
 
 ### 1. Cloner le dépôt
 ```bash
-git clone https://github.com/votre-utilisateur/TP2-Clustering-KMeans.git
-cd TP2-Clustering-KMeans
+git clone https://github.com/MichelTCHATCHOUA/clustering-kmeans-analysis
+cd clustering-kmeans-analysis
 ```
 
 ### 2. Créer un environnement virtuel (recommandé)
