@@ -91,7 +91,6 @@ TP2-Clustering-KMeans/
     ├── elbow_base3.png
     ├── calinski_base1.png
     ├── calinski_base3.png
-    ├── digits_purity.png
     ├── recognition_rate.png
     └── kmeans_manual_vs_sklearn.png
 ```
@@ -189,10 +188,33 @@ Les deux critères convergent vers les mêmes valeurs optimales :
 - **Base1** : coude visible à K = 3, score CH maximal à K = 3.
 - **Base3** : coude moins marqué, score CH orientant vers K = 6.
 
-![Elbow Base1](images/Coude_base1.png)
-![Calinski Base1](images/Critère_CH_base1.png)
-![Elbow Base3](images/Coude_base3.png)
-![Calinski Base3](images/Critère_CH_base3.png)
+<table>
+  <tr>
+    <td align="center">
+      <img src="images/Coude_base1.png" width="400"><br>
+      <em>Méthode du coude — Base1</em>
+    </td>
+    <td align="center">
+      <img src="images/Critère_CH_base1.png" width="400"><br>
+      <em>Score Calinski-Harabasz — Base1</em>
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="images/Coude_base3.png" width="400"><br>
+      <em>Méthode du coude — Base3</em>
+    </td>
+    <td align="center">
+      <img src="images/Critère_CH_base3.png" width="400"><br>
+      <em>Score Calinski-Harabasz — Base3</em>
+    </td>
+  </tr>
+</table>
 
 ---
 
