@@ -211,6 +211,7 @@ L'algorithme itère entre deux étapes jusqu'à convergence :
 **Affectation** : chaque point est assigné au cluster dont le centroïde est le plus proche.
 
 $$S_i^{(t)} = \left\\{ \mathbf{x}_j : \|\mathbf{x}_j - \mathbf{m}_i^{(t)}\| \leq \|\mathbf{x}_j - \mathbf{m}_{i^*}^{(t)}\| \; \forall \, i^* \right\\}$$
+
 **Mise à jour** : recalcul du barycentre de chaque cluster.
 
 $$\mathbf{m}_i^{(t+1)} = \frac{1}{|S_i^{(t)}|} \sum_{\mathbf{x}_j \in S_i^{(t)}} \mathbf{x}_j$$
