@@ -20,8 +20,8 @@ L'étude vise à maîtriser et analyser l'algorithme K-means à travers plusieur
 ## 📊 Données
 
 ### Données synthétiques
-- **base1.txt** : 300 points répartis en **3 classes réelles**, représentés en 2D — clusters bien séparés.
-- **base3.txt** : 600 points répartis en **4 classes réelles**, représentés en 2D — structure plus complexe avec zones de recouvrement.
+- [**base1.txt**](données/base1.txt) : 300 points répartis en **3 classes réelles**, représentés en 2D — clusters bien séparés.
+- [**base3.txt**](données/base3.txt) : 600 points répartis en **4 classes réelles**, représentés en 2D — structure plus complexe avec zones de recouvrement.
 
 ### Base Digits (sklearn)
 - **Source** : `sklearn.datasets.load_digits`
