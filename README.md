@@ -65,7 +65,7 @@ pip install -r requirements.txt
 
 ### 4. Lancer le notebook
 ```bash
-jupyter notebook TP2_TCHATCHOUA.ipynb
+jupyter notebook [codeSource.ipynb](TP2_TCHATCHOUA.ipynb)
 ```
 
 ### `requirements.txt`
@@ -224,6 +224,12 @@ $$\mathbf{m}_i^{(t+1)} = \frac{1}{|S_i^{(t)}|} \sum_{\mathbf{x}_j \in S_i^{(t)}}
 **Fonction de coût minimisée** :
 
 $$\sum_{i=1}^{k} \sum_{\mathbf{x}_j \in S_i} \|\mathbf{x}_j - \mathbf{m}_i\|^2$$
+
+---
+
+## 💻 Rapport
+
+* Pour une interprétation détaillée des courbes de densité et des matrices de covariance, consultez le [Rapport PDF](TP2_TCHATCHOUA.pdf).
 
 ---
 
