@@ -86,8 +86,7 @@ TP2-Clustering-KMeans/
 ├── base1.txt                  # Données synthétiques - 3 classes
 ├── base3.txt                  # Données synthétiques - 4 classes
 └── images/                    # Visualisations générées
-    ├── base1_clusters.png
-    ├── base3_clusters.png
+    ├── base1&base3_clusters.png
     ├── elbow_base1.png
     ├── elbow_base3.png
     ├── calinski_base1.png
@@ -168,16 +167,20 @@ L'analyse est structurée en quatre parties :
 ## 📊 Visualisations
 
 ### Distribution des clusters — Base1
-Les données de `base1.txt` présentent **3 clusters bien séparés**. Pour K = 3, l'algorithme converge vers une partition correspondant exactement aux classes réelles, avec une inertie finale de **18.50**.
+Les données de `base1.txt` présentent **3 clusters bien séparés**. la répartition des points montre une structure relativement claire composée de plusieurs groupes distincts, bien séparés les uns des autres.
 
-> 📁 Voir `images/base1_clusters.png`
+![Clusters Base1&Base3](images/Base1_distribution.png)
+
+Cette configuration suggère que l’algorithme des k-moyennes devrait parvenir à regrouper efficacement les données avec un nombre de clusters modéré (autour de 3 à 5).
 
 ---
 
 ### Distribution des clusters — Base3
-Les données de `base3.txt` sont plus complexes, avec des zones de recouvrement. Pour K = 6, l'algorithme capture les subdivisions internes de certaines classes, donnant une partition cohérente.
+Les données de `base3.txt` sont plus complexes, avec des zones de recouvrement. Cela rend le choix du nombre de clusters k plus délicat.  
 
-> 📁 Voir `images/base3_clusters.png`
+![Clusters Base3](images/Base3_distribution.png)
+
+Il se souligne donc l’intérêt d’utiliser des critères objectifs tels que la méthode du coude ou le score de Calinski-Harabasz pour déterminer la valeur optimale de k.
 
 ---
 
@@ -186,21 +189,28 @@ Les deux critères convergent vers les mêmes valeurs optimales :
 - **Base1** : coude visible à K = 3, score CH maximal à K = 3.
 - **Base3** : coude moins marqué, score CH orientant vers K = 6.
 
-> 📁 Voir `images/elbow_base1.png`, `images/calinski_base1.png`, `images/elbow_base3.png`, `images/calinski_base3.png`
+![Elbow Base1](images/Coude_base1.png)
+![Calinski Base1](images/Critère_CH_base1.png)
+![Elbow Base3](images/Coude_base3.png)
+![Calinski Base3](images/Critère_CH_base3.png)
 
 ---
 
 ### Taux de reconnaissance en fonction de k'
-La courbe montre une progression du taux de reconnaissance à mesure que k' augmente, avec une variance faible confirmant la stabilité des résultats sur plusieurs initialisations.
+La courbe montre une progression du **taux de reconnaissance** à mesure que le nombre de voisins *k'* augmente, avec une **faible variance** confirmant la stabilité des résultats sur plusieurs initialisations.
 
-> 📁 Voir `images/recognition_rate.png`
+![Taux de reconnaissance](images/Reconnaissance.png)
+
+On observe que l’augmentation de *k'* améliore progressivement la qualité de la classification, jusqu’à atteindre une zone de **stabilisation** où les gains deviennent marginaux, ce qui indique un choix de *k'* robuste.
 
 ---
 
 ### Comparaison manuelle vs sklearn (K = 3)
-Les deux implémentations produisent des visualisations identiques et une inertie finale parfaitement concordante (**18.4980**), validant la correction de l'implémentation manuelle.
+Les deux implémentations produisent des **visualisations identiques** et une **inertie finale parfaitement concordante** (**18.4980**), validant la **correction de l’implémentation manuelle** de l’algorithme K-means.
 
-> 📁 Voir `images/kmeans_manual_vs_sklearn.png`
+![K-means manuel vs sklearn](images/LastFig.png)
+
+Cette concordance confirme que l’algorithme développé reproduit fidèlement le comportement d’une implémentation de référence, garantissant la fiabilité des résultats obtenus.
 
 ---
 
